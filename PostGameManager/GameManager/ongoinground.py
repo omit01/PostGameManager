@@ -3,8 +3,12 @@ import uuid
 
 
 class OnGoingRound:
-    def __int__(self, post, groups):
-        self.uuid = uuid.uuid4()
+    def __init__(self, rounduuid, post, starttime, groups):
+        self.uuid = rounduuid
         self.post = post
-        self.starttime = time.time()
+        self.starttime = starttime
         self.groups = groups
+
+    @classmethod
+    def newongoinground(cls, post, groups):
+        return cls(uuid.uuid4(), post, time.time(), groups)

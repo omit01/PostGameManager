@@ -2,10 +2,10 @@ import uuid
 
 
 class FinishedRound:
-    def __int__(self, rounduuid, post, groups, scores, starttime, endtime):
+    def __init__(self, rounduuid, post, groups, scores, starttime, endtime):
         self.uuid = rounduuid
         self.post = post
         self.groups = groups
-        self.score = scores
+        self.scores = scores
         self.starttime = starttime
         self.endtime = endtime
